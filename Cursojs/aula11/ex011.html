@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+   <input type="text" name="txtnal" id="txtnal" placeholder="Digite seu país">
+   <input type="button" value="Verificar" onclick="verificar()">
+   <div id="res">
+
+   </div>
+   <script>
+    function verificar(){
+        var inputPais = document.querySelector('input#txtnal')
+        var pais = inputPais.value;
+        var res = document.querySelector('div#res')
+        if (pais.toLowerCase() == 'brasil'){
+            res.innerHTML = `Você é <strong>Brasileiro!</strong>`
+        } else {
+            res.innerHTML = `Você é <strong>Estrangeiro!</strong>`
+        }
+    }
+   </script>
+</body>
+</html>
